@@ -78,7 +78,7 @@ const crearPedido = async (nuevoPedido, carrito) => {
                     pedidoRuta_Recib:false,
                     pedidoRuta_fecReal:undefined,
                     pedidoRuta_coment:"",
-                    ruta_pasoTipo:""
+                    ruta_pasoTipo:misRutas[y].ruta_pasoTipo
                 }
 
                 await crearPedidoRuta(pedidoRuta)
