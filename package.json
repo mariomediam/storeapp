@@ -12,6 +12,7 @@
     "bootstrap": "^5.0.2",
     "dotenv": "^10.0.0",
     "firebase": "^8.9.0",
+    "generate-password": "^1.6.1",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",

@@ -5,6 +5,8 @@ export default function CarritoView() {
 
     const { carrito } = useContext(CarritoContext)
 
+    console.log(carrito)
+
     return (
         <div className="container">
             <div className="my-4 text-center">
@@ -22,6 +24,7 @@ export default function CarritoView() {
                         <th>Descuento</th>
                         <th>Precio Unitario</th>
                         <th>Precio Total</th>
+                        <th>Almacen</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +37,7 @@ export default function CarritoView() {
                             <td>S/ {prod.prod_oferta ? 
                             prod.cantidad * prod.prod_precio * 0.9 : 
                             prod.cantidad * prod.prod_precio}</td>
+                            <td>{prod.almacen_id_origen}</td>
                         </tr>
                     ))}
                 </tbody>

@@ -14,7 +14,7 @@ export const AuthContextProvider = (props) => {
 
     const signIn = async () => {
         const rpta = await auth.signInWithPopup(proveedorGoogle)
-        // console.log("google!!",rpta)
+        console.log("google!!",rpta)
     }
 
     const signOut = () => auth.signOut()
