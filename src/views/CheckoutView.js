@@ -110,17 +110,33 @@ export default function CheckoutView() {
 
 			
 
+			//const pedidoGenerado = await crearPedido(pedidoTmp, carrito)
+
+	
 			const pedidoGenerado = await crearPedido(pedidoTmp, carrito)
 		
 			await Swal.fire({
                 icon:'success',
                 title:`Pedido registrado`,
-				text: `Podrá hacer seguimiento del mismo con el código ${token}`,
+				text: `Podrá hacer seguimiento del mismo con el código ${pedidoGenerado["pedidoToken"]}`,
                 showConfirmButton:true                
             })
 
+			// await Swal.fire({
+            //     icon:'success',
+            //     title:`Pedido registrado`,
+			// 	text: `Podrá hacer seguimiento del mismo con el código ${token}`,
+            //     showConfirmButton:true                
+            // })
+
 		} catch (error) {
-			console.error(error)
+			
+			await Swal.fire({
+                icon:'error',
+                title:`Error`,
+				text: error,
+                showConfirmButton:true                
+            })
 		}
 
 		
